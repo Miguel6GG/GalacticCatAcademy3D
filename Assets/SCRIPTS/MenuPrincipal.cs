@@ -14,14 +14,14 @@ public class MenuPrincipal : MonoBehaviour
 
     public void IrMenuPrincipal()
     {
-        LeanTween.moveX(Menu.GetComponent<RectTransform>(), 0, 1.5f);
-        LeanTween.moveX(MenuNiveles.GetComponent<RectTransform>(), 1000, 1.5f);
+        LeanTween.moveX(Menu.GetComponent<RectTransform>(), 0, 1f).setEase(LeanTweenType.easeInOutBack);
+        LeanTween.moveX(MenuNiveles.GetComponent<RectTransform>(), 1000, 1f).setEase(LeanTweenType.easeInOutBack);
     }
 
     public void IrNiveles()
     {
-        LeanTween.moveX(Menu.GetComponent<RectTransform>(), -1000, 1.5f);
-        LeanTween.moveX(MenuNiveles.GetComponent<RectTransform>(), 0, 1.5f);
+        LeanTween.moveX(Menu.GetComponent<RectTransform>(), -1000, 1f).setEase(LeanTweenType.easeInOutBack);
+        LeanTween.moveX(MenuNiveles.GetComponent<RectTransform>(), 0, 1f).setEase(LeanTweenType.easeInOutBack);
     }
 
     public void Salir()
