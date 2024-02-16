@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PLATAFORMA
   - INTERRUPTOR
+  - ENEMIGO
   layers:
   - Default
   - TransparentFX
