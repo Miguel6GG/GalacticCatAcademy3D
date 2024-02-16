@@ -6,7 +6,7 @@ public class plataformaMovil : MonoBehaviour
 {
     public Transform puntoInicial; // Punto de inicio de la plataforma
     public Transform puntoFinal; // Punto final de la plataforma
-    public float velocidad = 2.0f; // Velocidad de movimiento de la plataforma
+    public float velocidad = 5.0f; // Velocidad de movimiento de la plataforma
 
     private Vector3 posicionInicial;
     private Vector3 posicionFinal;

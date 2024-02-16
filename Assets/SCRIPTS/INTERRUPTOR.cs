@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class INTERRUPTOR : MonoBehaviour
 {
-    public PlataformaMovil plataforma; // Referencia a la plataforma que se activará
+    public plataformaMovil plataforma; // Referencia a la plataforma que se activará
 
     private void OnTriggerEnter(Collider other)
     {
