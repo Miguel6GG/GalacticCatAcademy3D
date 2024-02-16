@@ -6,6 +6,7 @@ public class MenuPrincipal : MonoBehaviour
 {
     public GameObject Menu;
     public GameObject MenuNiveles;
+    public GameObject MenuOpciones;
 
     void Start()
     {
