@@ -197,7 +197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 474746953}
   m_Layer: 0
-  m_Name: puntoFinal
+  m_Name: puntoInicial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -211,7 +211,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474746952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1204.426, y: 733.2174, z: 2127.7822}
+  m_LocalPosition: {x: 1404.8, y: 523.6, z: 2037}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -399,7 +399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 900715417}
   m_Layer: 0
-  m_Name: puntoInicial
+  m_Name: puntoFinal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -413,7 +413,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900715416}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1204.426, y: 733.2174, z: 2127.7822}
+  m_LocalPosition: {x: 1404.8, y: 370, z: 2037}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -505,7 +505,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.41001707, y: -0, z: -0, w: 0.9120779}
-  m_LocalPosition: {x: 1095.3, y: 650.9, z: 1532.9}
+  m_LocalPosition: {x: 1281, y: 1134, z: 1532.9}
   m_LocalScale: {x: 0.18100716, y: 0.18100218, z: 0.18100218}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -593,9 +593,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdb6685d846c3db4d88abfbe4f591a8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntoInicial: {fileID: 0}
-  puntoFinal: {fileID: 0}
-  velocidad: 2
+  puntoInicial: {fileID: 474746953}
+  puntoFinal: {fileID: 900715417}
+  velocidad: 20
 --- !u!1001 &6878268456835834872
 PrefabInstance:
   m_ObjectHideFlags: 0
