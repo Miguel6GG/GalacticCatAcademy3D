@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuPrincipal : MonoBehaviour
 {
@@ -10,7 +11,25 @@ public class MenuPrincipal : MonoBehaviour
 
     void Start()
     {
-        
+        Scene currentScene = SceneManager.GetActiveScene();
+    }
+    
+    public void NuevaPartida()
+    {
+        SceneManager.LoadScene("NIVEL_1");
+    }
+
+    public void Nivel1()
+    {
+        SceneManager.LoadScene("NIVEL_1");
+    }
+    public void Nivel2()
+    {
+        SceneManager.LoadScene("NIVEL_2");
+    }
+    public void Nivel3()
+    {
+        SceneManager.LoadScene("NIVEL_3");
     }
 
     public void IrMenuPrincipal()
