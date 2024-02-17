@@ -9,13 +9,13 @@ public class OpcionesBrillo : MonoBehaviour
     public Slider sliderBrillo;
 
     public PostProcessProfile brightness;
-    public PostProcessLayer layer;
 
     AutoExposure exposure;
 
     void Start()
     {
         brightness.TryGetSettings(out exposure);
+        AjustarBrillo(sliderBrillo.value);
     }
 
     public void AjustarBrillo(float value)
@@ -23,10 +23,12 @@ public class OpcionesBrillo : MonoBehaviour
         if (value != 0)
         {
             exposure.keyValue.value = value;
+            print("Gilipollas");
         }
         else
         {
             exposure.keyValue.value = .05f;
+            print("Subnormal");
         }
     }
 }
