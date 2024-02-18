@@ -1,71 +1,39 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController))]
-public class PlayerController : MonoBehaviour
+public class MovementController : MonoBehaviour
 {
-    [Header("General")]
-    public float gravityScale = -20;
+    public float speed = 200f;
+    public float jumpForce = 500f; // Ajusta la fuerza del salto según sea necesario
 
-    [Header("Movement")]
-    public float walkSpeed = 2.5f;
-    public float runSpeed = 7.5f;
+    private Rigidbody rb;
+    private bool isGrounded;
 
-    [Header("Jump")]
-    public float jumpHeight = 2f;
-    public AudioSource jumpSound;
-    public AudioClip jumpClip;
-
-    private Vector3 moveInput = Vector3.zero;
-
-    CharacterController characterController;
-
-    private void Start()
+    void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        rb = GetComponent<Rigidbody>();
+        rb.useGravity = true; // Habilitar la gravedad
     }
 
-    private void Awake()
+    void Update()
     {
-        characterController = GetComponent<CharacterController>();
-        jumpSound = gameObject.AddComponent<AudioSource>();
-        jumpSound.clip = jumpClip;
-    }
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+        Vector3 move = new Vector3(horizontalInput, 0f, verticalInput);
+        move = transform.TransformDirection(move);
+        rb.velocity = move * speed;
 
-    private void Update()
-    {
-        Move();
-    }
+        // Verificar si el objeto está en el suelo
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, 0.1f);
 
-    private void Move()
-    {
-        if (characterController.isGrounded)
+        // Verificar si se presiona el botón de salto
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            HandleMovementInput();
-            HandleJumpInput();
+            Jump();
         }
-
-        moveInput.y += gravityScale * Time.deltaTime;
-        characterController.Move(moveInput * Time.deltaTime);
     }
 
-    private void HandleMovementInput()
+    void Jump()
     {
-        moveInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
-        moveInput = Vector3.ClampMagnitude(moveInput, 1f);
-
-        float speed = Input.GetButton("Sprint") ? runSpeed : walkSpeed;
-        moveInput = transform.TransformDirection(moveInput) * speed;
-    }
-
-    private void HandleJumpInput()
-    {
-        if (Input.GetButtonDown("Jump"))
-        {
-            moveInput.y = Mathf.Sqrt(jumpHeight * -2f * gravityScale);
-            jumpSound.Play();
-        }
+        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
 }
