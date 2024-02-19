@@ -1,39 +1,40 @@
 using UnityEngine;
 
-public class MovementController : MonoBehaviour
+public class CharacterMovement : MonoBehaviour
 {
-    public float speed = 200f;
-    public float jumpForce = 500f; // Ajusta la fuerza del salto según sea necesario
+    [SerializeField] float movementSpeed = 5;
+    [SerializeField] float jumpForce = 5;
+    [SerializeField] float gravity = 9.81f;
 
-    private Rigidbody rb;
-    private bool isGrounded;
+    CharacterController controller;
+    Animator animator;
 
-    void Start()
+    float verticalSpeed;
+
+    private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
-        rb.useGravity = true; // Habilitar la gravedad
+        controller = GetComponent<CharacterController>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-        Vector3 move = new Vector3(horizontalInput, 0f, verticalInput);
-        move = transform.TransformDirection(move);
-        rb.velocity = move * speed;
-
-        // Verificar si el objeto está en el suelo
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, 0.1f);
-
-        // Verificar si se presiona el botón de salto
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (controller.isGrounded)
         {
-            Jump();
+            if (Input.GetButtonDown("Jump"))
+                verticalSpeed = jumpForce;
+            else
+                verticalSpeed = -1;
         }
-    }
+        else
+        {
+            verticalSpeed -= gravity * Time.deltaTime;
+        }
 
-    void Jump()
-    {
-        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        float verticalInput = Input.GetAxisRaw("Vertical");
+
+        Vector3 movement = new Vector3(horizontalInput * movementSpeed, verticalSpeed, verticalInput * movementSpeed) * Time.deltaTime;
+        controller.Move(movement);
     }
 }
