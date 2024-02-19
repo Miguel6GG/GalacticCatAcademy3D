@@ -36,4 +36,12 @@ public class plataformaMovil : MonoBehaviour
     {
         activada = !activada; // Cambiar el estado de activación
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Activar(); // Activar la plataforma cuando entre en contacto con el objeto con la etiqueta "Player"
+        }
+    }
 }
