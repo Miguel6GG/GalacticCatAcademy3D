@@ -23,12 +23,10 @@ public class OpcionesBrillo : MonoBehaviour
         if (value != 0)
         {
             exposure.keyValue.value = value;
-            print("Gilipollas");
         }
         else
         {
             exposure.keyValue.value = .05f;
-            print("Subnormal");
         }
     }
 }

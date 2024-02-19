@@ -31,6 +31,10 @@ public class MenuPrincipal : MonoBehaviour
     {
         SceneManager.LoadScene("NIVEL_3");
     }
+    public void Nivel4()
+    {
+        SceneManager.LoadScene("NIVEL_4");
+    }
 
     public void IrMenuPrincipal()
     {
