@@ -659,6 +659,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1297725951 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1883126953418682627, guid: 9a0624f9c9fe8d54d9a46c689d599e69, type: 3}
+  m_PrefabInstance: {fileID: 1828088469783368790}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1499883057
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,6 +769,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1507298064 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6058315833223606682, guid: 9a0624f9c9fe8d54d9a46c689d599e69, type: 3}
+  m_PrefabInstance: {fileID: 1828088469783368790}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1562398068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1143,13 +1153,41 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1883126953418682627, guid: 9a0624f9c9fe8d54d9a46c689d599e69, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883126953418682627, guid: 9a0624f9c9fe8d54d9a46c689d599e69, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883126953418682627, guid: 9a0624f9c9fe8d54d9a46c689d599e69, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 139
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6058315833223606682, guid: 9a0624f9c9fe8d54d9a46c689d599e69, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -73
+      objectReference: {fileID: 0}
+    - target: {fileID: 6058315833223606682, guid: 9a0624f9c9fe8d54d9a46c689d599e69, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -233
       objectReference: {fileID: 0}
     - target: {fileID: 6058315833223606682, guid: 9a0624f9c9fe8d54d9a46c689d599e69, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 141
+      value: 58
       objectReference: {fileID: 0}
+    - target: {fileID: 6872266133261707494, guid: 9a0624f9c9fe8d54d9a46c689d599e69, type: 3}
+      propertyPath: velocidad
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872266133261707494, guid: 9a0624f9c9fe8d54d9a46c689d599e69, type: 3}
+      propertyPath: puntoFinal
+      value: 
+      objectReference: {fileID: 1507298064}
+    - target: {fileID: 6872266133261707494, guid: 9a0624f9c9fe8d54d9a46c689d599e69, type: 3}
+      propertyPath: puntoInicial
+      value: 
+      objectReference: {fileID: 1297725951}
     - target: {fileID: 7533109624601367652, guid: 9a0624f9c9fe8d54d9a46c689d599e69, type: 3}
       propertyPath: m_Name
       value: JAULA
@@ -1225,6 +1263,10 @@ PrefabInstance:
     - target: {fileID: 4674725765548750486, guid: 02c17b84027f1284aaef3c459dd0f963, type: 3}
       propertyPath: m_Name
       value: PLATAFORMA_INTERRUPTOR
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109818304472540125, guid: 02c17b84027f1284aaef3c459dd0f963, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 6179961560791785639, guid: 02c17b84027f1284aaef3c459dd0f963, type: 3}
       propertyPath: m_RootOrder
