@@ -11,6 +11,7 @@ public class plataformaMovil : MonoBehaviour
     private Vector3 posicionInicial;
     private Vector3 posicionFinal;
     private bool activada = false;
+    private bool activacionPermanente = false; // Nuevo flag para activación permanente
 
     private void Start()
     {
@@ -20,7 +21,7 @@ public class plataformaMovil : MonoBehaviour
 
     private void Update()
     {
-        if (activada)
+        if (activada || activacionPermanente) // Modificamos la condición aquí
         {
             // Mover la plataforma hacia el punto final
             transform.position = Vector3.MoveTowards(transform.position, posicionFinal, velocidad * Time.deltaTime);
@@ -34,7 +35,10 @@ public class plataformaMovil : MonoBehaviour
 
     public void Activar()
     {
-        activada = !activada; // Cambiar el estado de activación
+        if (!activacionPermanente) // Solo si no es permanente, cambia el estado
+            activada = !activada; // Cambiar el estado de activación
+        else
+            activada = true; // Si es permanente, activar siempre
     }
 
     private void OnTriggerEnter(Collider other)
@@ -42,6 +46,7 @@ public class plataformaMovil : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Activar(); // Activar la plataforma cuando entre en contacto con el objeto con la etiqueta "Player"
+            activacionPermanente = true; // Una vez activado, se hace permanente
         }
     }
 }
