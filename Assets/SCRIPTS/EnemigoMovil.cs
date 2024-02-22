@@ -7,7 +7,7 @@ public class EnemigoMovil : MonoBehaviour
 {
     public Transform puntoA;
     public Transform puntoB;
-    public float velocidad = 2.0f;
+    public float velocidad = 15.0f;
 
     private Vector3 objetivo;
     private bool enMovimiento = true;
