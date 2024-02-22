@@ -210,7 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puntoA: {fileID: 7742997072151816692}
   puntoB: {fileID: 4330434446542171463}
-  velocidad: 100
+  velocidad: 400
 --- !u!54 &8251252365265366476
 Rigidbody:
   m_ObjectHideFlags: 0

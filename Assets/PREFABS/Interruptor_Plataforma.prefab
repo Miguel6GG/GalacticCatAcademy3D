@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 7616019526552686824}
   m_Layer: 0
   m_Name: Interruptor_Plataforma
-  m_TagString: Untagged
+  m_TagString: INTERRUPTOR
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +139,7 @@ Transform:
   - {fileID: 1476397842716007739}
   - {fileID: 7808183856436506486}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2337060531036681144
 MonoBehaviour:
