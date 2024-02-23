@@ -57,4 +57,5 @@ public class CharacterMovement : MonoBehaviour
             lastMovementDirection = moveDirection;
         }
     }
+
 }

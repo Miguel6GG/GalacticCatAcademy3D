@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InterruptorJaula : MonoBehaviour
+public class InterruptorPlataforma : MonoBehaviour
 {
-    public JaulaMovil jaula;
+    public PlataformaMovil plataforma;
     private bool activado = false;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !activado)
         {
-            jaula.Activar();
+            plataforma.Activar();
             activado = true;
         }
     }
