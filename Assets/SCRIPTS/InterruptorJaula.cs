@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class InterruptorJaula : MonoBehaviour
 {
-    public JaulaMovil jaula;
-    private bool activado = false;
+    public JaulaMovil jaula; // Referencia a la jaula que se activará
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !activado)
+        if (other.CompareTag("Player"))
         {
-            jaula.Activar();
-            activado = true;
+            jaula.Activar(); // Activar la jaula cuando el jugador entra en contacto con el interruptor
         }
     }
 }

@@ -7,7 +7,6 @@ TagManager:
   - PLATAFORMA
   - INTERRUPTOR
   - ENEMIGO
-  - TRAMPOLIN
   layers:
   - Default
   - TransparentFX
