@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,13 +37,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -108,18 +108,282 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BotonesMenuPrincipal_0
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 828
+        width: 495
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f4ec423f8c10f459e9ac3678091abf
+      internalID: 527966716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonesMenuPrincipal_1
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 828
+        width: 495
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa05c1d662607db46a36072c474b690c
+      internalID: -57930353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonesMenuPrincipal_2
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 828
+        width: 495
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa89c2dd85dfe046ab3cadcf176a2fd
+      internalID: 1728377425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonesMenuPrincipal_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 571
+        width: 495
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f540ec7d1e29144b13c091fe93064d
+      internalID: -422356170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonesMenuPrincipal_4
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 571
+        width: 495
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2803e1e12e3d61a4b805164038e40ed6
+      internalID: -1256689292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonesMenuPrincipal_5
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 571
+        width: 495
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86af75c64bf9d1549a41113cf6910d73
+      internalID: -1739848754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonesMenuPrincipal_6
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 314
+        width: 495
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 423f43855c94ff84faf69ff482ec4a6f
+      internalID: 323929954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonesMenuPrincipal_7
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 314
+        width: 495
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a19b76279df48440b7def57adb1b9c3
+      internalID: 463032349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonesMenuPrincipal_8
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 314
+        width: 495
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb00fecadaea6a54696f3f49d37cf36f
+      internalID: -1557670035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonesMenuPrincipal_9
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 57
+        width: 495
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa5b824f221e1dd4ea8d24edebbcd3ce
+      internalID: -1683815111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonesMenuPrincipal_10
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 57
+        width: 495
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68114a11c759d384b9aefd2e2ca955b7
+      internalID: 48876831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotonesMenuPrincipal_11
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 57
+        width: 495
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87d7a8aa50a83d44ab4b8534e9033610
+      internalID: 1367562361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6186456d9a9127348bb3469381f45a53
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BotonesMenuPrincipal_0: 527966716
+      BotonesMenuPrincipal_1: -57930353
+      BotonesMenuPrincipal_10: 48876831
+      BotonesMenuPrincipal_11: 1367562361
+      BotonesMenuPrincipal_2: 1728377425
+      BotonesMenuPrincipal_3: -422356170
+      BotonesMenuPrincipal_4: -1256689292
+      BotonesMenuPrincipal_5: -1739848754
+      BotonesMenuPrincipal_6: 323929954
+      BotonesMenuPrincipal_7: 463032349
+      BotonesMenuPrincipal_8: -1557670035
+      BotonesMenuPrincipal_9: -1683815111
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
