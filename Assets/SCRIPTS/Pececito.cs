@@ -20,11 +20,18 @@ public class RotatingObject : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(nextSceneLoad);
-
-            if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
+            if(SceneManager.GetActiveScene().buildIndex == 10)
             {
-                PlayerPrefs.SetInt("levelAt", nextSceneLoad);
+                Application.OpenURL("https://www.youtube.com/embed/vxJ-tH4yM1Y");
+                Application.Quit();
+            } else
+            {
+                SceneManager.LoadScene(nextSceneLoad);
+
+                if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
+                {
+                    PlayerPrefs.SetInt("levelAt", nextSceneLoad);
+                }
             }
         }
         // Verificar si el objeto con el que colisionamos tiene el tag "Player"
