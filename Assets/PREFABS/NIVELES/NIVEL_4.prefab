@@ -327,6 +327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jaula: {fileID: 7882789834132802229}
   boton: {fileID: 4635389871870711100}
+  sonidoActivacion: {fileID: 8300000, guid: b6fad73266af1654caf9914edcbf1ca7, type: 3}
 --- !u!114 &4635389871870711100
 MonoBehaviour:
   m_ObjectHideFlags: 0

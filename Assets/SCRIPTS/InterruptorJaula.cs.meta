@@ -3,7 +3,10 @@ guid: f5c81bcc3bdfb754aa6d558f79a6f523
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - jaula: {instanceID: 0}
+  - boton: {instanceID: 0}
+  - sonidoActivacion: {fileID: 8300000, guid: b6fad73266af1654caf9914edcbf1ca7, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

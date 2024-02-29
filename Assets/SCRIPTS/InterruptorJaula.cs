@@ -6,7 +6,17 @@ public class InterruptorJaula : MonoBehaviour
 {
     public JaulaMovil jaula;
     public BotonPulsado boton; // Referencia a la plataforma que se activará
+    public AudioClip sonidoActivacion; // Sonido a reproducir cuando se activa el interruptor
     private bool activado = false;
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        // Obtener el componente AudioSource del GameObject
+        audioSource = GetComponent<AudioSource>();
+        // Asignar el clip de audio al AudioSource
+        audioSource.clip = sonidoActivacion;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,6 +25,12 @@ public class InterruptorJaula : MonoBehaviour
             jaula.Activar();
             boton.Activar(); // Activar la plataforma cuando el jugador entra en contacto con el interruptor
             activado = true;
+
+            // Reproducir el sonido de activación
+            if (sonidoActivacion != null && audioSource != null)
+            {
+                audioSource.Play();
+            }
         }
     }
 }

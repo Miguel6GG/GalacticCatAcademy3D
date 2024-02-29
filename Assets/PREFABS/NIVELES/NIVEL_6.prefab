@@ -1676,6 +1676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plataforma: {fileID: 1859631404834780423}
   boton: {fileID: 3012873611620495502}
+  sonidoActivacion: {fileID: 8300000, guid: b6fad73266af1654caf9914edcbf1ca7, type: 3}
 --- !u!114 &2329676394448311878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1690,6 +1691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plataforma: {fileID: 2398250669105499581}
   boton: {fileID: 3012873611620495502}
+  sonidoActivacion: {fileID: 8300000, guid: b6fad73266af1654caf9914edcbf1ca7, type: 3}
 --- !u!114 &208546930111973272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1704,6 +1706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plataforma: {fileID: 8796039705917011094}
   boton: {fileID: 3012873611620495502}
+  sonidoActivacion: {fileID: 8300000, guid: b6fad73266af1654caf9914edcbf1ca7, type: 3}
 --- !u!114 &2400206833057895429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1718,6 +1721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plataforma: {fileID: 8173850919769449346}
   boton: {fileID: 3012873611620495502}
+  sonidoActivacion: {fileID: 8300000, guid: b6fad73266af1654caf9914edcbf1ca7, type: 3}
 --- !u!114 &6048304760928656233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1732,6 +1736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plataforma: {fileID: 6457838475883799946}
   boton: {fileID: 3012873611620495502}
+  sonidoActivacion: {fileID: 8300000, guid: b6fad73266af1654caf9914edcbf1ca7, type: 3}
 --- !u!114 &3012873611620495502
 MonoBehaviour:
   m_ObjectHideFlags: 0
