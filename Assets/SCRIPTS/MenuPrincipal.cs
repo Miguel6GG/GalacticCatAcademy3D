@@ -35,6 +35,30 @@ public class MenuPrincipal : MonoBehaviour
     {
         SceneManager.LoadScene("NIVEL_4");
     }
+    public void Nivel5()
+    {
+        SceneManager.LoadScene("NIVEL_5");
+    }
+    public void Nivel6()
+    {
+        SceneManager.LoadScene("NIVEL_6");
+    }
+    public void Nivel7()
+    {
+        SceneManager.LoadScene("NIVEL_7");
+    }
+    public void Nivel8()
+    {
+        SceneManager.LoadScene("NIVEL_8");
+    }
+    public void Nivel9()
+    {
+        SceneManager.LoadScene("NIVEL_9");
+    }
+    public void Nivel10()
+    {
+        SceneManager.LoadScene("NIVEL_10");
+    }
 
     public void IrMenuPrincipal()
     {
@@ -61,6 +85,12 @@ public class MenuPrincipal : MonoBehaviour
 
         LeanTween.moveY(MenuNiveles.GetComponent<RectTransform>(), -600, 0f).setEase(LeanTweenType.easeInOutBack);
         LeanTween.moveY(MenuOpciones.GetComponent<RectTransform>(), 0, 0f).setEase(LeanTweenType.easeInOutBack);
+    }
+
+    public void ResetearProgreso()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene("MenuPrincipal");
     }
 
     public void Salir()

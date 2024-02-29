@@ -3,8 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class RotatingObject : MonoBehaviour
 {
-    public float rotationSpeed = 30f; // Velocidad de rotación del objeto
+    public float rotationSpeed = 30f; // Velocidad de rotaciï¿½n del objeto
+    public int nextSceneLoad;
 
+    void Start()
+    {
+        nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
+    }
     private void Update()
     {
         // Rotar el objeto sobre su propio eje Y
@@ -13,17 +18,26 @@ public class RotatingObject : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Verificar si el objeto con el que colisionamos tiene el tag "Player"
-        if (other.CompareTag("Player"))
+        if (other.gameObject.tag == "Player")
         {
-            // Si el jugador toca este objeto, completar el nivel y cargar la siguiente escena
-            CompleteLevel();
+            SceneManager.LoadScene(nextSceneLoad);
+
+            if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
+            {
+                PlayerPrefs.SetInt("levelAt", nextSceneLoad);
+            }
         }
+        // Verificar si el objeto con el que colisionamos tiene el tag "Player"
+        //if (other.CompareTag("Player"))
+        //{
+            // Si el jugador toca este objeto, completar el nivel y cargar la siguiente escena
+            //CompleteLevel();
+        //}
     }
 
     private void CompleteLevel()
     {
-        // Cargar la siguiente escena en el índice siguiente al actual
+        // Cargar la siguiente escena en el ï¿½ndice siguiente al actual
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
         {
@@ -31,7 +45,7 @@ public class RotatingObject : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("No hay más niveles disponibles.");
+            Debug.LogWarning("No hay mï¿½s niveles disponibles.");
         }
     }
 }
