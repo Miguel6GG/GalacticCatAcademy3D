@@ -390,6 +390,14 @@ PrefabInstance:
       propertyPath: objetivo
       value: 
       objectReference: {fileID: 1222764274}
+    - target: {fileID: 3145907182348969393, guid: 2a38ccbca1e357e43ad0a76801e63c41, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1ea51e80f5f8e26479e61a56998d5b1c, type: 3}
+    - target: {fileID: 6213078559238493730, guid: 2a38ccbca1e357e43ad0a76801e63c41, type: 3}
+      propertyPath: scriptMenuInGame
+      value: 
+      objectReference: {fileID: 266192252}
     - target: {fileID: 6256572431539526414, guid: 2a38ccbca1e357e43ad0a76801e63c41, type: 3}
       propertyPath: m_Name
       value: CAMARA

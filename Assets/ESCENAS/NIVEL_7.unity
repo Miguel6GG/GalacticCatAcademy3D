@@ -373,6 +373,10 @@ PrefabInstance:
       propertyPath: objetivo
       value: 
       objectReference: {fileID: 385243708}
+    - target: {fileID: 6213078559238493730, guid: 2a38ccbca1e357e43ad0a76801e63c41, type: 3}
+      propertyPath: scriptMenuInGame
+      value: 
+      objectReference: {fileID: 700217528}
     - target: {fileID: 6256572431539526414, guid: 2a38ccbca1e357e43ad0a76801e63c41, type: 3}
       propertyPath: m_Name
       value: CAMARA
