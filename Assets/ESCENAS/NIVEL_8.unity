@@ -685,6 +685,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 532660584}
   m_CullTransparentMesh: 1
+--- !u!4 &832253614 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9088892737580531763, guid: 86643541b64f8a940bd1a8c581a5d1d4, type: 3}
+  m_PrefabInstance: {fileID: 1614321794}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1152240656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,6 +1156,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1584633399910706587, guid: 2a38ccbca1e357e43ad0a76801e63c41, type: 3}
+      propertyPath: objetivo
+      value: 
+      objectReference: {fileID: 832253614}
     - target: {fileID: 6256572431539526414, guid: 2a38ccbca1e357e43ad0a76801e63c41, type: 3}
       propertyPath: m_Name
       value: CAMARA
