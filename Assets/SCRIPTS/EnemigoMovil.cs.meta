@@ -3,7 +3,10 @@ guid: 3502081e063fb554a932d7c4ad766794
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - puntoA: {instanceID: 0}
+  - puntoB: {instanceID: 0}
+  - sonidoColision: {fileID: 8300000, guid: 2ef6b809499108b4fa2322b3898f7aa2, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

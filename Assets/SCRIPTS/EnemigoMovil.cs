@@ -32,10 +32,14 @@ public class EnemigoMovil : MonoBehaviour
         if (transform.position == puntoB.position)
         {
             objetivo = puntoA.position;
+            // Girar en la dirección hacia puntoA
+            transform.LookAt(objetivo);
         }
         else if (transform.position == puntoA.position)
         {
             objetivo = puntoB.position;
+            // Girar en la dirección hacia puntoB
+            transform.LookAt(objetivo);
         }
     }
 

@@ -3,13 +3,22 @@ using UnityEngine.SceneManagement;
 
 public class RotatingObject : MonoBehaviour
 {
-    public float rotationSpeed = 30f; // Velocidad de rotaci�n del objeto
+    public float rotationSpeed = 30f; // Velocidad de rotación del objeto
     public int nextSceneLoad;
+    public AudioClip collisionSound; // Sonido a reproducir al colisionar con el jugador
+    private AudioSource audioSource;
 
     void Start()
     {
         nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            // Añadir un AudioSource si no existe en el objeto
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
+
     private void Update()
     {
         // Rotar el objeto sobre su propio eje Y
@@ -20,11 +29,18 @@ public class RotatingObject : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if(SceneManager.GetActiveScene().buildIndex == 10)
+            // Reproducir sonido al entrar en contacto con el jugador
+            if (collisionSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(collisionSound);
+            }
+
+            if (SceneManager.GetActiveScene().buildIndex == 10)
             {
                 Application.OpenURL("https://www.youtube.com/embed/vxJ-tH4yM1Y");
                 Application.Quit();
-            } else
+            }
+            else
             {
                 SceneManager.LoadScene(nextSceneLoad);
 
@@ -33,26 +49,6 @@ public class RotatingObject : MonoBehaviour
                     PlayerPrefs.SetInt("levelAt", nextSceneLoad);
                 }
             }
-        }
-        // Verificar si el objeto con el que colisionamos tiene el tag "Player"
-        //if (other.CompareTag("Player"))
-        //{
-            // Si el jugador toca este objeto, completar el nivel y cargar la siguiente escena
-            //CompleteLevel();
-        //}
-    }
-
-    private void CompleteLevel()
-    {
-        // Cargar la siguiente escena en el �ndice siguiente al actual
-        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
-        {
-            SceneManager.LoadScene(nextSceneIndex);
-        }
-        else
-        {
-            Debug.LogWarning("No hay m�s niveles disponibles.");
         }
     }
 }

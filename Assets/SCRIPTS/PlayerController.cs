@@ -5,9 +5,13 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private float movementSpeed = 5;
     [SerializeField] private float jumpForce = 5;
     [SerializeField] private float gravity = 9.81f;
+    [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip attackSound1;
+    [SerializeField] private AudioClip attackSound2;
 
     private CharacterController controller;
     private Animator animator;
+    private AudioSource audioSource;
 
     private float verticalSpeed;
     private Vector3 lastMovementDirection;
@@ -17,10 +21,16 @@ public class CharacterMovement : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
     {
+        if (Input.GetButtonDown("attack"))
+        {
+            PlayRandomAttackSound();
+        }
+
         bool isGrounded = controller.isGrounded;
 
         if (isGrounded)
@@ -48,19 +58,20 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             verticalSpeed = jumpForce;
-            isJumping = true; // Set IsJumping to true when jumping
+            isJumping = true;
+            PlayJumpSound();
         }
         else
         {
             verticalSpeed = -gravity * Time.deltaTime;
-            isJumping = false; // Set IsJumping to false when not jumping
+            isJumping = false;
         }
     }
 
     private void HandleAirborneMovement()
     {
         verticalSpeed -= gravity * Time.deltaTime;
-        isJumping = true; // Set IsJumping to true when airborne
+        isJumping = true;
     }
 
     private void HandleRotation()
@@ -81,20 +92,42 @@ public class CharacterMovement : MonoBehaviour
     {
         if (isGrounded)
         {
-            if (horizontalInput != 0 || verticalInput != 0)
-            {
-                animator.SetBool("IsWalking", true);
-            }
-            else
-            {
-                animator.SetBool("IsWalking", false);
-            }
+            animator.SetBool("IsWalking", horizontalInput != 0 || verticalInput != 0);
         }
         else
         {
             animator.SetBool("IsWalking", false);
         }
 
-        animator.SetBool("IsJumping", isJumping); // Update IsJumping in the animator
+        animator.SetBool("IsJumping", isJumping);
+    }
+
+    private void PlayJumpSound()
+    {
+        if (jumpSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(jumpSound);
+        }
+    }
+
+    private void PlayRandomAttackSound()
+    {
+        if (audioSource != null)
+        {
+            int randomIndex = Random.Range(1, 3);
+
+            switch (randomIndex)
+            {
+                case 1:
+                    audioSource.PlayOneShot(attackSound1);
+                    break;
+                case 2:
+                    audioSource.PlayOneShot(attackSound2);
+                    break;
+                default:
+                    Debug.LogError("Sonido invalido");
+                    break;
+            }
+        }
     }
 }
