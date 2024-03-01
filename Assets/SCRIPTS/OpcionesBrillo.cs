@@ -1,32 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//
 using UnityEngine.UI;
-using UnityEngine.Rendering.PostProcessing;
 
 public class OpcionesBrillo : MonoBehaviour
 {
     public Slider sliderBrillo;
+    public float sliderValue;
+    public Image panelBrillo;
 
-    public PostProcessProfile brightness;
-
-    AutoExposure exposure;
-
-    void Start()
+    private void Start()
     {
-        brightness.TryGetSettings(out exposure);
-        AjustarBrillo(sliderBrillo.value);
+        sliderBrillo.value = PlayerPrefs.GetFloat("brillo", 0f);
+
+        panelBrillo.color = new Color(panelBrillo.color.r, panelBrillo.color.g, panelBrillo.color.b, sliderBrillo.value);
     }
 
-    public void AjustarBrillo(float value)
+    public void ChangeSlider(float value)
     {
-        if (value != 0)
-        {
-            exposure.keyValue.value = value;
-        }
-        else
-        {
-            exposure.keyValue.value = .05f;
-        }
+        sliderValue = value;
+        PlayerPrefs.SetFloat("brillo", sliderValue);
+        panelBrillo.color = new Color(panelBrillo.color.r, panelBrillo.color.g, panelBrillo.color.b, sliderBrillo.value);
     }
 }

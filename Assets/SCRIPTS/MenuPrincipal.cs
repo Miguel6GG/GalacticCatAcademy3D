@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class MenuPrincipal : MonoBehaviour
@@ -8,9 +9,11 @@ public class MenuPrincipal : MonoBehaviour
     public GameObject Menu;
     public GameObject MenuNiveles;
     public GameObject MenuOpciones;
+    public AudioMixer mixer;
 
     void Start()
     {
+        mixer.SetFloat("LowPass", 19000);
         Scene currentScene = SceneManager.GetActiveScene();
     }
     
