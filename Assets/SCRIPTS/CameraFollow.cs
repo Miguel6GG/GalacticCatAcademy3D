@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform objetivo; // El transform del personaje que quieres seguir
-    public float suavidadRotacion = 5f; // Controla la suavidad de la rotación de la cámara
+    public Transform objetivo;
+    public float suavidadRotacion = 5f;
 
-    private Vector3 offset; // La diferencia de posición inicial entre la cámara y el personaje
+    private Vector3 offset;
 
     void Start()
     {
-        offset = transform.position - objetivo.position; // Calcula la diferencia de posición inicial
+        offset = transform.position - objetivo.position;
     }
 
     void FixedUpdate()
@@ -18,10 +18,12 @@ public class CameraFollow : MonoBehaviour
         Vector3 nuevaPosicion = objetivo.position + offset;
         transform.position = nuevaPosicion;
 
-        // Calcula la rotación deseada de la cámara
+        // Calcula la rotación deseada de la cámara solo en el eje Y
         Quaternion rotacionDeseada = Quaternion.LookRotation(objetivo.position - transform.position);
+        rotacionDeseada.x = 0;
+        rotacionDeseada.z = 0;
 
-        // Suaviza la rotación de la cámara
+        // Suaviza la rotación de la cámara solo en el eje Y
         transform.rotation = Quaternion.Slerp(transform.rotation, rotacionDeseada, suavidadRotacion * Time.deltaTime);
     }
 }

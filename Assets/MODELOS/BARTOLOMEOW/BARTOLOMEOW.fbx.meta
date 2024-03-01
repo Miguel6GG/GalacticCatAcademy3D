@@ -62,7 +62,7 @@ ModelImporter:
       takeName: BARTOLOMEOW_BONES|BARTOLOMEOW_IDLE
       internalID: -5871248057054056396
       firstFrame: 0
-      lastFrame: 39
+      lastFrame: 38
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -91,7 +91,7 @@ ModelImporter:
       takeName: BARTOLOMEOW_BONES|BARTOLOMEOW_JUMP
       internalID: 5185986324237987630
       firstFrame: 0
-      lastFrame: 39
+      lastFrame: 38
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -207,7 +207,7 @@ ModelImporter:
       takeName: BARTOLOMEOW_BONES|BARTOLOMEOW_WALK
       internalID: 7839450943171391942
       firstFrame: 0
-      lastFrame: 39
+      lastFrame: 38
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
